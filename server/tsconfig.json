@@ -9,3 +9,44 @@
   },
   "include": ["src"]
 }
+
+/***
+Here's a brief description for each key-value pair in your tsconfig.json file, including what each key does, its purpose, and the corresponding values:
+
+    rootDir: "src"
+        Key Purpose: Specifies the root directory containing TypeScript files to compile.
+        Value Meaning: "src" indicates that the source files are located in a folder named src.
+        Example: If your project has TypeScript files in src/components and src/utils, all are included from the src directory.
+
+    outDir: "dist"
+        Key Purpose: Specifies the output directory for the compiled JavaScript files.
+        Value Meaning: "dist" means the compiled files will be placed in a directory called dist.
+        Example: After compilation, if you had src/app.ts, it would produce dist/app.js.
+
+    target: "es2020"
+        Key Purpose: Sets the ECMAScript target version for the compiled JavaScript.
+        Value Meaning: "es2020" means the output will use features supported up to ECMAScript 2020.
+        Example: Features like optional chaining (?.) will be preserved in the output JavaScript.
+
+    moduleResolution: "node"
+        Key Purpose: Defines the strategy for module resolution.
+        Value Meaning: "node" indicates using Node.js-style resolution for modules.
+        Example: Import paths like require('./module') will follow the Node.js resolution mechanism.
+
+    esModuleInterop: true
+        Key Purpose: Enables compatibility with imports from non-ES Module (CommonJS) modules.
+        Value Meaning: true means default imports from CommonJS modules are allowed.
+        Example: Allows import express from 'express'; instead of import * as express from 'express';.
+
+    module: "commonjs"
+        Key Purpose: Specifies the module system for the output files.
+        Value Meaning: "commonjs" refers to using CommonJS modules.
+        Example: Modules are compiled with require and module.exports syntax.
+
+    include: ["src"]
+        Key Purpose: Instructs TypeScript which files are to be included in the compilation process.
+        Value Meaning: ["src"] means all files under the src directory are included.
+        Example: Any file with .ts or .tsx extension inside src folder will be compiled.
+
+Each setting in your tsconfig.json directs how TypeScript compiles the code, manages modules, handles ECMAScript standards, and specifies file locations.
+***/
